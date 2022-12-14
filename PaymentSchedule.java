@@ -1,5 +1,12 @@
+/*Author: Juan Rincon 
+Last Edited: 12/14/22
+Purpose: Calculate the mortage payment of a user and display the monthly payment along with the ending balance after each payment
+*/
+
+
 import java.util.Scanner;
 import java.text.NumberFormat;
+
 
 public class PaymentSchedule{
 	
