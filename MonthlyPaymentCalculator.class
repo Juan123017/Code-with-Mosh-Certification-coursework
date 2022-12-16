@@ -1,0 +1,72 @@
+public class MonthlyPaymentCalculator {
+    
+    private  double principal;
+    private  double annualInterestRate;
+    private  int totalYears;
+
+    final double MIN_PRINCIPAL = 1000;
+
+	final double MAX_PRINCIPAL = 1_000_000;
+
+	final double MIN_INTEREST = 0;
+
+    final double MAX_INTEREST = 30;
+
+	final double MIN_YEARS = 1;
+
+	final double MAX_YEARS = 30;
+
+
+
+    public void setPrincipal(){
+       Double principal = getInput("Principal: ", MIN_PRINCIPAL,MAX_PRINCIPAL, "VALUE CANNOT BE LESS THAN $1,000.00 OR MORE THAN $1,000,000.00");
+        this.principal = principal;
+    }
+
+    public double getPrincipal(){
+        return principal;
+    }
+
+    public void setAnnualInterestRate(){
+       double annualInterestRate = getInput("Annual Interest Rate: ", MIN_INTEREST,MAX_INTEREST, "VALUE CANNOT BE LESS THAN 0 % OR MORE THAN 30 %");
+        this.annualInterestRate = annualInterestRate;
+    }
+
+    public double getAnnualInterestRate(){
+        return annualInterestRate;
+    }
+
+    public void setTotalYears(){
+       int totalYears = (int)getInput("Total Years: ", MIN_YEARS ,MAX_YEARS, "VALUE CANNOT BE LESS THAN 1 OR MORE THAN 30");
+        this.totalYears = totalYears;
+    }
+
+    public int getTotalYears(){
+        return totalYears;
+    }
+
+    public double monthlyPayment(double principal, double annualInterestRate, int totalYears ){
+
+		final int PERCENT = 100;
+
+		final int MONTHS = 12;
+
+		double totalMonthlyMorgagePayment = 0;
+
+		double monthlyInterestRate = 0;
+
+		monthlyInterestRate = (annualInterestRate / PERCENT) / MONTHS;
+
+		double totalMonthlyMorgagePayments = totalYears * MONTHS;
+
+		double numerand = monthlyInterestRate * (Math.pow(1 + monthlyInterestRate,totalMonthlyMorgagePayments));
+
+		double denominator = (Math.pow(1 + monthlyInterestRate,totalMonthlyMorgagePayments)) - 1;
+
+		totalMonthlyMorgagePayment = principal * (numerand / denominator);
+
+		return totalMonthlyMorgagePayment;
+
+	}
+
+}

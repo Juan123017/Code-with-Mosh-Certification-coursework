@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Driver {
+
+    public static void main(String[] args){
+
+        int years = 0;
+        double principal = 0;
+        double annualInterestRate = 0;
+
+        MonthlyPaymentCalculator paymentCalc = new MonthlyPaymentCalculator();
+        
+        paymentCalc.setPrincipal();
+
+        paymentCalc.setAnnualInterestRate();
+
+        paymentCalc.setTotalYears();
+
+        System.out.println(paymentCalc)
+
+
+
+
+        
+    }
+
+    
+}
