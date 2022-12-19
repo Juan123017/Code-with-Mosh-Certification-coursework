@@ -1,6 +1,7 @@
 /* Author: Juan Rincon
     Date: 12/19/22
-    Purpose: Calculate monthly morgage Payment, schedule and number of payments. Written to showcase object oriented programming, Java programming, and basic Java fundamentals skills.
+    Purpose: Calculate monthly morgage Payment, schedule and number of payments. Written to showcase object oriented programming, 
+    Java programming, and basic Java fundamentals skills.
     */
 
 public class Driver {
