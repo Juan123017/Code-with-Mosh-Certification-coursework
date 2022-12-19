@@ -37,12 +37,6 @@ public class Driver {
 
        PaymentSchedule.monthlyPaymentSchedule(principal,monthlyPayment);
 
-       //System.out.println(years + "\n" + principal + "\n" + annualInterestRate);
-
-
-
-
-
     }
 
 
